@@ -9,6 +9,11 @@ use App\Models\Noticia;
 
 class NoticiasController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware("auth");
+    }
+
     public function index(){
         $noticias = Noticia::all();
         $argumentos=array();

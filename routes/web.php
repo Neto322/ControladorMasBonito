@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\NoticiasController;
 use App\Http\Controllers\Admin\NoticiasController as AdminNoticiasController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +14,17 @@ use App\Http\Controllers\Admin\NoticiasController as AdminNoticiasController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+
+//Rutas de noticias
 
 Route::get('/', [InicioController::class, "index"]);
 
