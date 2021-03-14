@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class TableroController extends Controller
+{
+    public function _construct()
+    {
+        $this->middleware("auth");
+    }
+
+    public function tablero()
+    {
+        return view('admin.tablero');
+    }
+}

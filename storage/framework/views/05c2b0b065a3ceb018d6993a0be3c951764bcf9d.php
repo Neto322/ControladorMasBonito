@@ -1,4 +1,5 @@
 
+<?php $__env->startSection("titulo","Editar noticia"); ?>
 <?php $__env->startSection('contenido_principal'); ?>
 
     <!-- Content Header (Page header) -->

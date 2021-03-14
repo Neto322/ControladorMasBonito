@@ -1,4 +1,5 @@
     
+    <?php $__env->startSection("titulo","Nueva noticia"); ?>
     <?php $__env->startSection("contenido_principal"); ?>
 
 

@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InicioController;
 use App\Http\Controllers\NoticiasController;
 use App\Http\Controllers\Admin\NoticiasController as AdminNoticiasController;
+use App\Http\Controllers\Admin\TableroController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,3 +53,6 @@ Route::delete("/admin/noticia/{id}", [AdminNoticiasController::class, "destroy"]
 Route::get("/admin/noticias/{id}",[AdminNoticiasController::class, "show"])->name("admin.noticias.show");
 
 Route::get("/admin/blank",[AdminNoticiasController::class, "blank"])->name("admin.blank");
+
+//Tablero
+Route::get("/admin", [TableroController::class,"tablero"])->name("admin.tablero");
