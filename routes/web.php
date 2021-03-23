@@ -27,7 +27,7 @@ require __DIR__.'/auth.php';
 
 //Rutas de noticias
 
-Route::get('/', [InicioController::class, "index"]);
+Route::get('/', [NoticiasController:: class, "lista"])->name("noticias");
 
 Route::get('/contacto', [InicioController::class,"contacto"]);
 
